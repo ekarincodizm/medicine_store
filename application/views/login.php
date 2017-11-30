@@ -7,28 +7,32 @@
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="<?php echo 'dist/bootswatch/' . (empty($this->config->item('theme')) ? 'flatly' : $this->config->item('theme')) . '/bootstrap.min.css' ?>"/>
 	<!-- start css template tags -->
-	<link rel="stylesheet" type="text/css" href="css/login.css"/>
+
 	<!-- end css template tags -->
 </head>
 
 <body>
-	<div id="logo" align="center"><img src="<?php echo base_url();?>/images/logo.png"></div>
+    <div class="col-md-4 col-md-offset-4">
+        <div id="logo"><img src="<?php echo base_url();?>/images/logo.png" style="width: 420px; border-radius: 20px; margin-top: 50px; margin-bottom: 20px"></div>
 
-	<div id="login">
+        <div id="login">
 		<?php echo form_open('login') ?>
 			<div id="container">
 				<div align="center" style="color:red"><?php echo validation_errors(); ?></div>
 
 				<div id="login_form">
-					<div class="input-group">
-						<span class="input-group-addon input-sm"><span class="glyphicon glyphicon-user"></span></span>
-						<input class="form-control" placeholder="<?php echo $this->lang->line('login_username')?>" name="username" type="username" size=20 autofocus></input>
+					<div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon input-sm"><span class="glyphicon glyphicon-user"></span></span>
+                            <input class="form-control" placeholder="<?php echo $this->lang->line('login_username')?>" name="username" type="username" size=20 autofocus></input>
+                        </div>
 					</div>
-
+                    <div class="form-group">
 					<div class="input-group">
 						<span class="input-group-addon input-sm"><span class="glyphicon glyphicon-lock"></span></span>
 						<input class="form-control" placeholder="<?php echo $this->lang->line('login_password')?>" name="password" type="password" size=20></input>
 					</div>
+                    </div>
 
 					<?php
 					if($this->config->item('gcaptcha_enable'))
@@ -44,7 +48,7 @@
 		<?php echo form_close(); ?>
 
 
-
+    </div>
 	</div>
 </body>
 </html>
