@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<base href="<?php echo base_url();?>" />
-	<title><?php echo $this->config->item('company') . ' | OSPOS ' . $this->config->item('application_version')  . ' | ' .  $this->lang->line('login_login'); ?></title>
+	<title><?php echo $this->config->item('company') . ' | NTG POS ' . $this->config->item('application_version')  . ' | ' .  $this->lang->line('login_login'); ?></title>
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="<?php echo 'dist/bootswatch/' . (empty($this->config->item('theme')) ? 'flatly' : $this->config->item('theme')) . '/bootstrap.min.css' ?>"/>
 	<!-- start css template tags -->
@@ -38,12 +38,12 @@
 					}
 					?>
 
-					<input class="btn btn-primary btn-block" type="submit" name="loginButton" value="Go"/>
+					<input class="btn btn-primary btn-block" type="submit" name="loginButton" value="Login"/>
 				</div>
 			</div>
 		<?php echo form_close(); ?>
 
-		<h1>NTG POS</h1>
+
 
 	</div>
 </body>
