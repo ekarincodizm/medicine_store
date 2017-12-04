@@ -86,6 +86,22 @@ if(isset($error))
 		}
 		?>
 	</div>
+    <div class="form-group form-group-sm">
+        <div class='col-md-12'>
+            <div id="backup_db" class="btn btn-success btn-block">
+                <span class="glyphicon glyphicon-console"></span> Backup Database
+            </div>
+        </div>
+    </div>
 </div>
 
 <?php $this->load->view("partial/footer"); ?>
+<script>
+$(function(){
+
+$("#backup_db").click(function() {
+window.location='<?php echo site_url('config/backup_db') ?>';
+});
+
+});
+</script>
