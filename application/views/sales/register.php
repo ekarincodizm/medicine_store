@@ -588,6 +588,15 @@ $(document).ready(function()
 		}
 	});
 
+
+	$("#item").keyup(function () {
+            setInterval(function () {
+                $("#add_item_form").submit();
+            },3000)
+    });
+
+
+
 	$('#item').focus();
 
 	$('#item').keypress(function (e) {
@@ -596,6 +605,8 @@ $(document).ready(function()
 			return false;
 		}
 	});
+
+
 
 	$('#item').blur(function()
 	{

@@ -89,7 +89,7 @@ if(isset($error))
     <div class="form-group form-group-sm">
         <div class='col-md-12'>
             <div id="backup_db" class="btn btn-success btn-block">
-                <span class="glyphicon glyphicon-console"></span> Backup Database
+                <span class="glyphicon glyphicon-console"></span> Database Backup
             </div>
         </div>
     </div>
